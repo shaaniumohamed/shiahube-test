@@ -1,0 +1,33 @@
+# Settings for the project dashboard.
+# Change a value, save this file, then press "Refresh" in the app.
+
+# Folder with your Excel files (the register and the project detail files).
+data_folder: ./data
+
+# The date lateness is measured from. "today" follows the calendar.
+# For a fixed date write it like this:  as_of: 2025-11-10
+as_of: today
+
+# A project is "At risk" when ...
+at_risk:
+  due_within_days: 14          # ... it is due within this many days, or
+  progress_behind_points: 20   # ... delivery is this many % points behind the time used.
+
+# "No recent update" warning: days since the last dated entry in the notes.
+stale_update_days: 30
+
+# How far ahead the "Coming up" strip looks.
+upcoming_days: 30
+
+# A date in the notes this many days before the request date is flagged as a possible typo.
+date_typo_days: 30
+
+# Use the INVOICE sheet as a cross-check (fills missing invoice amounts, flags disagreements).
+use_invoice_sheet: true
+
+# Treat a project as delivered when the notes don't say, but (almost) the full
+# contract value has been invoiced. It is labelled "assumed from invoices".
+assume_delivered_when_fully_invoiced: true
+fully_invoiced_percent: 99.5
+
+currency: MVR

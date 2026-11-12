@@ -1,0 +1,13 @@
+# Real project files never go to GitHub
+data/*
+!data/.gitkeep
+tests_local/
+# Things the app remembers on this computer
+.app_state/
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Excel lock files
+~$*
