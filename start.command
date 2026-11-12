@@ -3,15 +3,15 @@
 cd "$(dirname "$0")" || exit 1
 
 PY=""
-for candidate in python3 python; do
+for candidate in python3 python3.15 python3.14 python3.13 python3.12 python3.11 python; do
   if command -v "$candidate" >/dev/null 2>&1 && \
-     "$candidate" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)' 2>/dev/null; then
+     "$candidate" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 11) else 1)' 2>/dev/null; then
     PY="$candidate"; break
   fi
 done
 if [ -z "$PY" ]; then
   echo
-  echo "Python 3.10 or newer is not installed."
+  echo "Python 3.11 or newer is not installed."
   echo "Install it from https://www.python.org/downloads/ and double-click this file again."
   echo
   read -r -p "Press Enter to close this window."

@@ -14,7 +14,7 @@ It never changes your Excel files. You do not need to clean up old data.
 
 ## 1. Install once
 
-1. Install **Python** (version 3.10 or newer) from <https://www.python.org/downloads/>.
+1. Install **Python** (version 3.11 or newer) from <https://www.python.org/downloads/>.
    - **Windows:** on the first screen of the installer, tick **"Add python.exe to PATH"**.
 2. Download this folder to your computer (on GitHub: green **Code** button → **Download ZIP**, then unzip it).
 
@@ -24,8 +24,24 @@ That is all. The first start installs everything else by itself (it needs the in
 
 | Your computer | What to do |
 |---|---|
-| Windows | Double-click **`start.bat`** |
-| Mac | Double-click **`start.command`** (the first time: right-click → **Open** → **Open**) |
+| **Windows** | Double-click **`start.bat`** |
+| **Mac** | Double-click **`start.command`** |
+
+Use only the file for your kind of computer. On a Mac, ignore `start.bat`; on Windows, ignore
+`start.command`. If a file opens as text in an editor, it is the one for the other kind of
+computer.
+
+**Mac, first time only.** macOS blocks files downloaded from the internet until you allow them:
+
+1. Double-click `start.command`. If a message says it cannot be opened, click **Done**.
+2. Open **System Settings → Privacy & Security** and scroll down to the message about
+   `start.command`. Click **Open Anyway**, then confirm.
+3. Double-click `start.command` again.
+
+On older versions of macOS, right-click `start.command` → **Open** → **Open** does the same.
+
+**Windows, first time only.** If a blue "Windows protected your PC" box appears, click
+**More info** → **Run anyway**.
 
 A window with text opens and, a moment later, the dashboard opens in your browser.
 Keep the text window open while you use the dashboard. Close it to stop the app.
@@ -144,6 +160,8 @@ note counts as "no recent update", and so on. Save the file and press **Refresh 
 | What you see | What to do |
 |---|---|
 | "Python is not installed" | Install Python (step 1) and start again. On Windows, tick "Add python.exe to PATH". |
+| The start file opens as text in an editor | You opened the file for the other kind of computer. On a Mac use `start.command`; on Windows use `start.bat`. |
+| Mac: "cannot be opened" or "not verified" | See "Mac, first time only" above. Or open the **Terminal** app, type `cd ` (with a space), drag the project folder into the window, press Enter, then type `bash start.command` and press Enter. |
 | "Set-up failed" | Check the internet connection and start again. |
 | A file is listed as "not read: the file is locked" | Close it in Excel and press **Refresh files**. |
 | A file is listed as "skipped" | The app found no "Project name" header and no "Description" + "Quantity" headers in it. |
