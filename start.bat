@@ -32,7 +32,9 @@ goto end
 echo.
 echo Python 3.11 or newer is not installed.
 echo Install it from https://www.python.org/downloads/
-echo On the first screen of the installer, tick "Add python.exe to PATH".
+echo Answer y to the questions the installer asks.
+echo If Python is already installed and you still see this, open Command Prompt,
+echo type:  py install   and press Enter.
 echo Then double-click start.bat again.
 echo.
 pause

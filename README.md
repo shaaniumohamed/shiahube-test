@@ -15,8 +15,14 @@ It never changes your Excel files. You do not need to clean up old data.
 ## 1. Install once
 
 1. Install **Python** (version 3.11 or newer) from <https://www.python.org/downloads/>.
-   - **Windows:** on the first screen of the installer, tick **"Add python.exe to PATH"**.
+   - **Windows:** the installer opens a text window and asks a few yes/no questions (long
+     file paths, adding Python to PATH, installing the latest Python). Type **y** and press
+     Enter for each. Restart the PC if it asks you to.
+   - **Windows, older installer:** if you see a tick box **"Add python.exe to PATH"**
+     instead, tick it and click **Install Now**.
 2. Download this folder to your computer (on GitHub: green **Code** button → **Download ZIP**, then unzip it).
+   - **Windows:** keep the folder somewhere short, such as `C:\project-dashboard`, not deep
+     inside OneDrive. Very long folder paths can make the first start fail.
 
 That is all. The first start installs everything else by itself (it needs the internet for a few minutes).
 
@@ -159,10 +165,11 @@ note counts as "no recent update", and so on. Save the file and press **Refresh 
 
 | What you see | What to do |
 |---|---|
-| "Python is not installed" | Install Python (step 1) and start again. On Windows, tick "Add python.exe to PATH". |
+| "Python is not installed" | Install Python (step 1) and start again. On Windows, if Python is installed but the message still appears, open **Command Prompt**, type `py install`, press Enter, then start again. |
 | The start file opens as text in an editor | You opened the file for the other kind of computer. On a Mac use `start.command`; on Windows use `start.bat`. |
 | Mac: "cannot be opened" or "not verified" | See "Mac, first time only" above. Or open the **Terminal** app, type `cd ` (with a space), drag the project folder into the window, press Enter, then type `bash start.command` and press Enter. |
 | "Set-up failed" | Check the internet connection and start again. |
+| Windows: set-up fails mentioning a file path or name that is too long | Move the whole folder to `C:\project-dashboard`, delete the `.venv` folder inside it if there is one, and start again. |
 | A file is listed as "not read: the file is locked" | Close it in Excel and press **Refresh files**. |
 | A file is listed as "skipped" | The app found no "Project name" header and no "Description" + "Quantity" headers in it. |
 | Old `.xls` file | Open it in Excel and use **Save As → Excel Workbook (.xlsx)**. |
